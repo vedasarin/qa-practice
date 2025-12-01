@@ -1,2 +1,2 @@
-TC#201: Verify password reset with valid email
-TC#202: Verify password reset with invalid email
+TC#401: Verify login fails with empty username
+TC#402: Verify login fails with empty password
