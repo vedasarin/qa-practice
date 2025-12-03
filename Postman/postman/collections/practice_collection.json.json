@@ -1,0 +1,687 @@
+{
+  "info": {
+    "_postman_id": "895b5c8b-a3f4-4907-b0b1-4855d88d70da",
+    "name": "PRACTICE COLLECTION",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49984764",
+    "_collection_link": "https://sarinveda-8094268.postman.co/workspace/ca63bfae-775c-4a63-8a33-e4ef2e29e264/collection/49984764-895b5c8b-a3f4-4907-b0b1-4855d88d70da?action=share&source=collection_link&creator=49984764"
+  },
+  "item": [
+    {
+      "name": "GET ALL USERS",
+      "id": "f63f1f60-3035-4bcb-b0d5-d88f83b774e6",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET SINGLE USER",
+      "id": "5b419307-012b-4990-b873-dfb482a9b0e6",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET USING QUERY PARAM",
+      "id": "18e033af-cd63-406d-a424-9ccedf009a31",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "MULTIPLE PARAM",
+      "id": "b615cbfb-9992-4d2b-a450-f52b86b30d14",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/comments?postId=1&id=1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "comments"
+          ],
+          "query": [
+            {
+              "key": "postId",
+              "value": "1"
+            },
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NOT EXISTING VALUE",
+      "id": "5825bddb-3fcf-4606-ae32-791a2d400995",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "INVALID ENDPOINT",
+      "id": "a5e72550-fb13-4286-9e92-c8408037a336",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/invalidurl",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "invalidurl"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PAGINATINATION SIMULATION",
+      "id": "f122c171-c2f0-4d0d-9497-c986bf8dc555",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "_page",
+              "value": "1"
+            },
+            {
+              "key": "_limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CHECK RESPONSE TIME",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "da96f224-a657-45b0-8b5b-4b21bcf1b361",
+            "exec": [
+              "pm.test(\"Response time < 500ms\", () => {",
+              "    pm.expect(pm.response.responseTime).to.be.below(500);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "34aa5ca7-0c23-454e-ae92-58e1dc3c08df",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/comments",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "comments"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST USER",
+      "id": "f6a950fc-4846-40b2-a19d-fb45e22b1352",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n     \"name\": \"Nikhila Test\",\r\n     \"email\": \"nikhila@test.com\",\r\n     \"username\": \"nikhila_qa\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST WITH ALL FIELDS",
+      "id": "54e184be-fce0-40eb-9194-09b8e909a005",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n            \"name\": \"Nikhila Test\",\r\n        \"username\": \"Nikhila.qa\",\r\n        \"email\": \"nikhila@testmail.com\",\r\n        \"address\": {\r\n            \"street\": \"abbatt close\",\r\n            \"suite\": \"Suite 22\",\r\n            \"city\": \"London\",\r\n            \"zipcode\": \"31428-2261\",\r\n            \"geo\": {\r\n                \"lat\": \"-38.2386\",\r\n                \"lng\": \"57.2232\"\r\n            }\r\n        },\r\n        \"phone\": \"024-648-4584\",\r\n        \"website\": \"amebrose.net\",\r\n        \"company\": {\r\n            \"name\": \"Hoeger LLC\",\r\n            \"catchPhrase\": \"Centralized empowering task-force\",\r\n            \"bs\": \"target end-to-end models\"\r\n        }\r\n }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST WITH MISSING FIELD",
+      "id": "f3c04579-ea15-4056-95d5-916f7ee402f0",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n            \r\n        \"username\": \"Nikhila.qa\",\r\n        \r\n      \r\n }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST WITH INVALID DATA",
+      "id": "36badab9-7217-487b-8ac5-24d2e4ae5999",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"userId\": 1,\r\n  \"title\": \"Updated Post Title - Testing PUT Method\",\r\n  \"body\": \"This post has been updated through API testing!\"\r\n}"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/99999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "99999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST WITH SPECIAL CHARACTER",
+      "id": "dbac2e95-9298-4a82-8df2-48114f1c9c3a",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"userId\": 1adfdsf%$^&&,\r\n \r\n  \"body\": \"This post has been updated through API testing!\"\r\n}"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT FULL UPDATE",
+      "id": "5ce8049d-3220-418a-ad38-9b9160a8e25e",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"id\": 1,\r\n     \"name\": \"Updated Name\",\r\n     \"email\": \"updated@test.com\",\r\n     \"username\": \"updated_user\"\r\n     // Include ALL fields\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT MISSING FIELDS",
+      "id": "67fda1af-cf9a-43ac-aeff-54cc70c140d1",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"id\": 1,\r\n     \"name\": \"Updated Name\",\r\n     \"email\": \"updated@test.com\",\r\n     \r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PARTIAL UPDATE",
+      "id": "a37ddc50-7cab-4bed-a6b7-8f716ceb5d36",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "Body: {\r\n     \"name\": \"Only Name Changed\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "MULTIPLE PATCH",
+      "id": "230faaa5-7222-48e8-a6ed-f1694281ad5b",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\"id\":1,\r\n     \"name\": \"Only Name Changed\",\r\n     \"email\" :\"EMAIL@EMAIL.COM\",\r\n     \"USERNAME\":\"MY NAME\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH WITH WRONG ID",
+      "id": "a46b5376-e200-4a8c-8708-26f63ba20902",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"id\":2,\r\n     \"name\": \"Only Name Changed\",\r\n     \"email\" :\"EMAIL@EMAIL.COM\",\r\n     \"USERNAME\":\"MY NAME\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE EXISTING RESOURCE",
+      "id": "98b06aa2-221b-40a6-a088-ca9f0be1b7ff",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"id\":2,\r\n     \"name\": \"Only Name Changed\",\r\n     \"email\" :\"EMAIL@EMAIL.COM\",\r\n     \"USERNAME\":\"MY NAME\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE NON EXISTING",
+      "id": "0b9f04a5-8f1b-418d-b66f-d7cc751a856f",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"id\":2,\r\n     \"name\": \"Only Name Changed\",\r\n     \"email\" :\"EMAIL@EMAIL.COM\",\r\n     \"USERNAME\":\"MY NAME\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/9999",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "9999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE WITH INVALID FORMAT",
+      "id": "757c7b65-bc37-4d77-85c5-974dacf01cb9",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"id\":2,\r\n     \"name\": \"Only Name Changed\",\r\n     \"email\" :\"EMAIL@EMAIL.COM\",\r\n     \"USERNAME\":\"MY NAME\"\r\n   }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users/ABC",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users",
+            "ABC"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE WITHOUT ID",
+      "id": "3ed446dd-85d8-437c-a017-3df571526827",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n            \r\n        \"username\": \"Nikhila.qa\",\r\n        \r\n      \r\n }"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API  KEY",
+      "id": "3b4edc55-74f7-488f-96cb-9c593d284a46",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/login",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ENVIRONMENT VARIABLE",
+      "id": "6508cd96-0741-4adf-b479-ca09c9e32930",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}",
+          "host": [
+            "{{baseURL}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SETTING VARIABLE FROM THE SCRIPT",
+      "id": "579e6679-d3f0-4cfc-b7fa-0d8a13ad3128",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
