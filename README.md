@@ -1,62 +1,50 @@
-# QA Practice Repository
+# QA Practice Portfolio
 
-This repository contains artifacts for manual testing practice:
-
-* **testcases.txt** → Core test cases  
-* **testcases2.txt** → Bug validation scenarios  
-* **queries.sql** → SQL queries for DB validation  
-* **testplan.md** → Test plan documentation  
-* **Postman/postman/collections/** → API test collections  
-
-Bugs are tracked via GitHub Issues and linked to commits.
-
-## 🧪 API Testing with Postman
-
-This repository includes Postman collections used for API validation and practice. The setup was initialized using Postman's local Git integration, which created two folders:
-
-- `.postman/` — contains internal Postman configuration files (e.g., workspace settings, globals)  
-- `postman/` — contains actual API collections used for testing  
-
-### 📁 Collection Files
-
-All API test collections are stored in:
-Postman/postman/collections/
-
-Included files:
-- `my_collection.json` → API endpoints for practice and validation  
-- `practice_collection.json` → Additional scenarios for exploring request/response behavior  
-
-### 🔗 How They Fit Into QA Workflow
-
-- **Manual Testing** → Validates user-facing flows (login, signup, etc.)  
-- **SQL Scripts** → Confirms backend data integrity  
-- **Postman Collections** → Exercises APIs directly, even for scenarios not covered in manual test cases  
-- **Bug Reports** → Capture discrepancies across UI, API, and database layers  
-
-This layered approach ensures broader QA coverage by testing both user-facing and backend components.
+This repository showcases my practical QA and software testing work. It includes manual test cases, SQL query practice, and API testing collections — all organized to demonstrate real-world QA workflows.
 
 ---
 
-## 📂 Repository Structure
+## 📂 Folder Structure
 
-Included files:
-- `my_collection.json` → API endpoints for practice and validation  
-- `practice_collection.json` → Additional scenarios for exploring request/response behavior  
+- **SQL/**  
+  Contains practice SQL queries and exercises in `.docx` format.  
+  Demonstrates ability to write joins, subqueries, and validation queries for testing databases.
 
-### 🔗 How They Fit Into QA Workflow
+- **TestCases/**  
+  Includes manual test cases in `.txt` and `.xlsx` formats.  
+  Covers functional testing, scenario-based validation, and structured test documentation.
 
-- **Manual Testing** → Validates user-facing flows (login, signup, etc.)  
-- **SQL Scripts** → Confirms backend data integrity  
-- **Postman Collections** → Exercises APIs directly, even for scenarios not covered in manual test cases  
-- **Bug Reports** → Capture discrepancies across UI, API, and database layers  
+- **Postman/**  
+  Holds API testing collections in `.json` format.  
+  Showcases API request/response validation, collection design, and automation with Postman.
 
-This layered approach ensures broader QA coverage by testing both user-facing and backend components.
+- **testplan.md**  
+  A sample test plan document outlining scope, objectives, and strategy for QA projects.
 
 ---
 
-## 📂 Repository Structure
+## 🛠 Skills Demonstrated
 
-
-qa-practice/ ├── Postman/ │   ├── .postman/                # Internal Postman config (workspace, globals) │   └── postman/ │       └── collections/ │           ├── my_collection.json │           └── practice_collection.json ├── README.md ├── testcases.txt ├── testcases2.txt ├── queries.sql └── testplan.md
+- Writing and executing **manual test cases** for web applications  
+- Designing and validating **SQL queries** for backend testing  
+- Performing **API testing** with Postman collections  
+- Creating structured QA artifacts (test plans, bug reports, documentation)  
+- Using Git/GitHub for version control and portfolio presentation  
+
+---
+
+## 🎯 Purpose
+
+This repo is designed as a **QA practice portfolio** to highlight my hands-on skills in testing, validation, and documentation. It reflects my ability to connect different QA tools and workflows in real-world scenarios.
+
+---
+
+## 📌 Notes for Recruiters
+- Each folder contains **real practice artifacts** created during QA learning and testing exercises.  
+- The structure mirrors how QA teams organize test cases, SQL scripts, and API collections.  
+- This repo demonstrates readiness for **manual testing, API validation, and database QA tasks**.
 
 
+- Each folder contains **real practice artifacts** created during QA learning and testing exercises.  
+- The structure mirrors how QA teams organize test cases, SQL scripts, and API collections.  
+- This repo demonstrates readiness for **manual testing, API validation, and database QA tasks**.
