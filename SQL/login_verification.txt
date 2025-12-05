@@ -1,0 +1,4 @@
+SELECT * 
+FROM user_activity 
+WHERE username = 'testuser' 
+ORDER BY timestamp DESC;
