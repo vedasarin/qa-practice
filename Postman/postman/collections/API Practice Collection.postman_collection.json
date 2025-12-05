@@ -1,0 +1,219 @@
+{
+  "info": {
+    "name": "API Practice Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication Practice",
+      "item": [
+        {
+          "name": "Login (Mock)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\":\"testuser\",\"password\":\"password123\"}"
+            },
+            "url": "https://httpbin.org/post"
+          }
+        },
+        {
+          "name": "Register (Mock)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\":\"newuser\",\"email\":\"user@example.com\",\"password\":\"pass123\"}"
+            },
+            "url": "https://httpbin.org/post"
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Management",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/users"
+          }
+        },
+        {
+          "name": "Get Single User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/users/1"
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"John Doe\",\"email\":\"john@example.com\",\"username\":\"johndoe\"}"
+            },
+            "url": "https://jsonplaceholder.typicode.com/users"
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1,\"name\":\"Jane Doe\",\"email\":\"jane@example.com\",\"username\":\"janedoe\"}"
+            },
+            "url": "https://jsonplaceholder.typicode.com/users/1"
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/users/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Posts Management",
+      "item": [
+        {
+          "name": "Get All Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/posts"
+          }
+        },
+        {
+          "name": "Get Single Post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/posts/1"
+          }
+        },
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"My Post\",\"body\":\"This is my post content\",\"userId\":1}"
+            },
+            "url": "https://jsonplaceholder.typicode.com/posts"
+          }
+        },
+        {
+          "name": "Update Post",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1,\"title\":\"Updated Post\",\"body\":\"Updated content\",\"userId\":1}"
+            },
+            "url": "https://jsonplaceholder.typicode.com/posts/1"
+          }
+        },
+        {
+          "name": "Delete Post",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "https://jsonplaceholder.typicode.com/posts/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Testing Utilities",
+      "item": [
+        {
+          "name": "Test GET",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://httpbin.org/get"
+          }
+        },
+        {
+          "name": "Test POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"test\":\"data\"}"
+            },
+            "url": "https://httpbin.org/post"
+          }
+        },
+        {
+          "name": "Test Status Codes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://httpbin.org/status/200"
+          }
+        },
+        {
+          "name": "Test Delay",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://httpbin.org/delay/2"
+          }
+        }
+      ]
+    }
+  ]
+}

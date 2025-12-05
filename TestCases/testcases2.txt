@@ -1,2 +1,0 @@
-TC#401: Verify login fails with empty username
-TC#402: Verify login fails with empty password
