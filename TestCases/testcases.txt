@@ -1,0 +1,5 @@
+Test Case 1: Verify login with valid credentials
+Test Case 4: Verify user can log out successfully
+Test Case 5: Verify password reset email is sent
+Test Case 6: Verify search returns correct results
+Test Case 7: Verify error message for invalid email format

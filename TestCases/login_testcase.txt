@@ -1,0 +1,9 @@
+Test Case ID: TC_API_001
+Title: Verify login API with valid credentials
+Precondition: User account exists with username "testuser" and password "Password123"
+Steps:
+1. Send POST request to /login endpoint with valid username and password
+2. Observe the response
+Expected Result:
+- Response code = 200 OK
+- Response body contains "token"
