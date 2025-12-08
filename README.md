@@ -1,50 +1,60 @@
 # QA Practice Portfolio
 
-This repository showcases my practical QA and software testing work. It includes manual test cases, SQL query practice, and API testing collections — all organized to demonstrate real-world QA workflows.
+This repository demonstrates my end-to-end QA workflows, including manual test cases, API testing with Postman, SQL validations, and structured bug reporting. It showcases how I design, execute, and document complete testing cycles.
 
 ---
 
-## 📂 Folder Structure
-
-- **SQL/**  
-  Contains practice SQL queries and exercises in `.docx` format.  
-  Demonstrates ability to write joins, subqueries, and validation queries for testing databases.
+## 📁 Repository Structure
 
 - **TestCases/**  
-  Includes manual test cases in `.txt` and `.xlsx` formats.  
-  Covers functional testing, scenario-based validation, and structured test documentation.
+  Manual test cases written step by step for each API (Login, Registration).
 
 - **Postman/**  
-  Holds API testing collections in `.json` format.  
-  Showcases API request/response validation, collection design, and automation with Postman.
+  Postman collections and requests for API execution.
 
-- **testplan.md**  
-  A sample test plan document outlining scope, objectives, and strategy for QA projects.
+- **SQL/**  
+  SQL scripts to validate backend data after API execution.
 
----
-
-## 🛠 Skills Demonstrated
-
-- Writing and executing **manual test cases** for web applications  
-- Designing and validating **SQL queries** for backend testing  
-- Performing **API testing** with Postman collections  
-- Creating structured QA artifacts (test plans, bug reports, documentation)  
-- Using Git/GitHub for version control and portfolio presentation  
+- **BugReports/**  
+  Defects identified during testing, documented in Markdown format. Includes a reusable bug report template.
 
 ---
 
-## 🎯 Purpose
+## 🚀 Completed QA Cycles
 
-This repo is designed as a **QA practice portfolio** to highlight my hands-on skills in testing, validation, and documentation. It reflects my ability to connect different QA tools and workflows in real-world scenarios.
+### 1. Login API
+- Manual test case → `TestCases/login_testcase.txt`  
+- Postman request → `Postman/login_collection.json`  
+- SQL validation → `SQL/login_verification.txt`  
+- Bug reports → none logged
+
+### 2. Registration API
+- Manual test case → `TestCases/registration_testcase.txt`  
+- Postman request → `Postman/registration_collection.json`  
+- SQL validation → `SQL/registration_verification.txt`  
+- Bug reports →  
+  - `BugReports/registration_missing_fields.md`  
+  - `BugReports/registration_duplicate_email.md`
 
 ---
+## 🛠️ How to Run
 
-## 📌 Notes for Recruiters
-- Each folder contains **real practice artifacts** created during QA learning and testing exercises.  
-- The structure mirrors how QA teams organize test cases, SQL scripts, and API collections.  
-- This repo demonstrates readiness for **manual testing, API validation, and database QA tasks**.
+1. **Manual Test Cases**  
+   Review `.txt` files in `TestCases/` for step-by-step execution flow.
 
+2. **Postman Execution**  
+   - Import JSON collections from `Postman/` into Postman.  
+   - Run requests and observe responses.
 
-- Each folder contains **real practice artifacts** created during QA learning and testing exercises.  
-- The structure mirrors how QA teams organize test cases, SQL scripts, and API collections.  
-- This repo demonstrates readiness for **manual testing, API validation, and database QA tasks**.
+3. **SQL Validation**  
+   - Execute queries from `SQL/` against the database.  
+   - Confirm data consistency after API calls.
+
+4. **Bug Reports**  
+   - Check `BugReports/` for defects found during testing.  
+   - Each report includes steps, expected vs actual results, and impact.
+
+---
+## 📌 About
+
+Created by **Nikhila** — QA Engineer refreshing skills in API testing, SQL validation, Git/GitHub workflows, and structured bug reporting. This repo is designed to showcase practical QA skills in a clear, professional format.
