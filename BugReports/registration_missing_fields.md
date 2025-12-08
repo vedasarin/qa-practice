@@ -27,3 +27,18 @@ When sending a registration request with missing fields (username, email, passwo
      "email": "",
      "password": ""
    }
+- Send the request.
+
+Expected Result
+- Response code = 400 Bad Request
+- Response body:
+{
+  "status": "error",
+  "message": "Username, email, and password are required"
+}
+
+
+
+Actual Result
+- Response code = 500 Internal Server Error
+- Response body contains generic error or stack trace.
