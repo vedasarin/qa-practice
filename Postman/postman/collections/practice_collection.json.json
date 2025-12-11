@@ -2,9 +2,7 @@
   "info": {
     "_postman_id": "895b5c8b-a3f4-4907-b0b1-4855d88d70da",
     "name": "PRACTICE COLLECTION",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "49984764",
-    "_collection_link": "https://sarinveda-8094268.postman.co/workspace/ca63bfae-775c-4a63-8a33-e4ef2e29e264/collection/49984764-895b5c8b-a3f4-4907-b0b1-4855d88d70da?action=share&source=collection_link&creator=49984764"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
@@ -679,7 +677,22 @@
       "id": "579e6679-d3f0-4cfc-b7fa-0d8a13ad3128",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "d64fe9f6-f3ac-4223-ba0d-1d2431973cf8",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
       },
       "response": []
     }
